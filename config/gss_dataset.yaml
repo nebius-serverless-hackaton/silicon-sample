@@ -1,0 +1,10 @@
+dataset: gss
+release: r3a-2026-07
+source_url: https://gss.norc.org/content/dam/gss/get-the-data/documents/stata/GSS_stata.zip
+dta_path: data/GSS_stata/gss7224_r3a.dta
+encoding: latin1            # verified: UTF-8 read crashes on value labels
+base_year: 2024
+weight_var: wtssps          # verified: 100% coverage 1972-2024
+id_vars: [year, id]
+extra_vars: [ballot]
+processed_version: 1

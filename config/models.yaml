@@ -1,0 +1,3 @@
+# $ per 1M tokens. Models missing here still run - cost_usd just stays null.
+# Fill from https://studio.nebius.ai pricing for the models you actually use, e.g.:
+# NousResearch/Hermes-4-70B: {input: 0.00, output: 0.00}

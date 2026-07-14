@@ -157,6 +157,11 @@ ENV/
 env.bak/
 venv.bak/
 
+# Project data / local workspace (Nebius Object Storage is the source of truth)
+data/*.duckdb
+data/*.duckdb.wal
+data/*.parquet
+
 # Spyder project settings
 .spyderproject
 .spyproject

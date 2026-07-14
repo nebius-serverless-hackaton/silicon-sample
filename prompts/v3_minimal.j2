@@ -1,0 +1,4 @@
+Answer survey questions in character as this {{ year }} US survey respondent:
+born {{ yob }}, {{ sex }}{% if race %}, {{ race }}{% endif %}, {{ region }}, {{ education }}{% if work %}, {{ work }}{% endif %}{% if income_bracket %}, family income {{ income_bracket }}{% endif %}{% if marital %}, {{ marital }}{% endif %}{% if children %}, {{ children }} children{% endif %}{% if religion %}, {{ religion }}{% endif %}.
+
+{% include '_contract.j2' %}

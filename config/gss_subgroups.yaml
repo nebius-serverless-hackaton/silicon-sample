@@ -1,0 +1,17 @@
+# Subgroup dimensions for target distributions and scoring. `source` is a
+# respondents column; dims with bins/labels are cut from a numeric column,
+# the rest pass categorical values through as-is.
+
+- dim: age_bracket
+  source: age
+  bins: [18, 30, 45, 65, .inf]
+  labels: ["18-29", "30-44", "45-64", "65+"]
+
+- dim: region
+  source: region
+
+- dim: education
+  source: education
+
+- dim: income
+  source: income_bracket

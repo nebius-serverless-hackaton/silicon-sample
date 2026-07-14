@@ -1,0 +1,350 @@
+# Calibration questions, verbatim from the GSS codebook. Option codes verified
+# against value labels in gss7224_r3.dta. `volunteered: true` marks answers
+# respondents gave spontaneously but interviewers did not read out -
+# templates may present them differently. `drop_codes` are codes valid in the
+# data but excluded from both prompts and targets.
+
+- qid: gss:abany
+  var: abany
+  qtype: single_choice
+  text: >-
+    Please tell me whether or not you think it should be possible for a
+    pregnant woman to obtain a legal abortion if the woman wants it for any
+    reason?
+  options:
+    - {code: 1, text: "Yes"}
+    - {code: 2, text: "No"}
+
+- qid: gss:cappun
+  var: cappun
+  qtype: single_choice
+  text: >-
+    Do you favor or oppose the death penalty for persons convicted of murder?
+  options:
+    - {code: 1, text: "Favor"}
+    - {code: 2, text: "Oppose"}
+
+- qid: gss:grass
+  var: grass
+  qtype: single_choice
+  text: >-
+    Do you think the use of marijuana should be made legal or not?
+  options:
+    - {code: 1, text: "Should be legal"}
+    - {code: 2, text: "Should not be legal"}
+
+- qid: gss:gunlaw
+  var: gunlaw
+  qtype: single_choice
+  text: >-
+    Would you favor or oppose a law which would require a person to obtain a
+    police permit before he or she could buy a gun?
+  options:
+    - {code: 1, text: "Favor"}
+    - {code: 2, text: "Oppose"}
+
+- qid: gss:homosex
+  var: homosex
+  qtype: single_choice
+  text: >-
+    What about sexual relations between two adults of the same sex - do you
+    think it is always wrong, almost always wrong, wrong only sometimes, or
+    not wrong at all?
+  options:
+    - {code: 1, text: "Always wrong"}
+    - {code: 2, text: "Almost always wrong"}
+    - {code: 3, text: "Wrong only sometimes"}
+    - {code: 4, text: "Not wrong at all"}
+  drop_codes: [5]
+
+- qid: gss:prayer
+  var: prayer
+  qtype: single_choice
+  text: >-
+    The United States Supreme Court has ruled that no state or local
+    government may require the reading of the Lord's Prayer or Bible verses
+    in public schools. What are your views on this - do you approve or
+    disapprove of the court ruling?
+  options:
+    - {code: 1, text: "Approve"}
+    - {code: 2, text: "Disapprove"}
+
+- qid: gss:fepol
+  var: fepol
+  qtype: single_choice
+  text: >-
+    Do you agree or disagree with this statement: Most men are better suited
+    emotionally for politics than are most women.
+  options:
+    - {code: 1, text: "Agree"}
+    - {code: 2, text: "Disagree"}
+
+- qid: gss:natenvir
+  var: natenvir
+  qtype: single_choice
+  text: >-
+    We are faced with many problems in this country, none of which can be
+    solved easily or inexpensively. I'm going to name one of these problems,
+    and I'd like you to tell me whether you think we're spending too much
+    money on it, too little money, or about the right amount. Improving and
+    protecting the environment - are we spending too much, too little, or
+    about the right amount?
+  options:
+    - {code: 1, text: "Too little"}
+    - {code: 2, text: "About right"}
+    - {code: 3, text: "Too much"}
+
+- qid: gss:natheal
+  var: natheal
+  qtype: single_choice
+  text: >-
+    We are faced with many problems in this country, none of which can be
+    solved easily or inexpensively. I'm going to name one of these problems,
+    and I'd like you to tell me whether you think we're spending too much
+    money on it, too little money, or about the right amount. Improving and
+    protecting the nation's health - are we spending too much, too little, or
+    about the right amount?
+  options:
+    - {code: 1, text: "Too little"}
+    - {code: 2, text: "About right"}
+    - {code: 3, text: "Too much"}
+
+- qid: gss:natrace
+  var: natrace
+  qtype: single_choice
+  text: >-
+    We are faced with many problems in this country, none of which can be
+    solved easily or inexpensively. I'm going to name one of these problems,
+    and I'd like you to tell me whether you think we're spending too much
+    money on it, too little money, or about the right amount. Improving the
+    conditions of Blacks - are we spending too much, too little, or about the
+    right amount?
+  options:
+    - {code: 1, text: "Too little"}
+    - {code: 2, text: "About right"}
+    - {code: 3, text: "Too much"}
+
+- qid: gss:natfare
+  var: natfare
+  qtype: single_choice
+  text: >-
+    We are faced with many problems in this country, none of which can be
+    solved easily or inexpensively. I'm going to name one of these problems,
+    and I'd like you to tell me whether you think we're spending too much
+    money on it, too little money, or about the right amount. Welfare - are
+    we spending too much, too little, or about the right amount?
+  options:
+    - {code: 1, text: "Too little"}
+    - {code: 2, text: "About right"}
+    - {code: 3, text: "Too much"}
+
+- qid: gss:nataid
+  var: nataid
+  qtype: single_choice
+  text: >-
+    We are faced with many problems in this country, none of which can be
+    solved easily or inexpensively. I'm going to name one of these problems,
+    and I'd like you to tell me whether you think we're spending too much
+    money on it, too little money, or about the right amount. Foreign aid -
+    are we spending too much, too little, or about the right amount?
+  options:
+    - {code: 1, text: "Too little"}
+    - {code: 2, text: "About right"}
+    - {code: 3, text: "Too much"}
+
+- qid: gss:trust
+  var: trust
+  qtype: single_choice
+  text: >-
+    Generally speaking, would you say that most people can be trusted or that
+    you can't be too careful in dealing with people?
+  options:
+    - {code: 1, text: "Most people can be trusted"}
+    - {code: 2, text: "You can't be too careful in dealing with people"}
+    - {code: 3, text: "Depends", volunteered: true}
+
+- qid: gss:fair
+  var: fair
+  qtype: single_choice
+  # probe-calibrated (2026-07-12): listed=46% hedge vs 11% real; last-resort=2%, best MAE
+  volunteered_style: last-resort
+  text: >-
+    Do you think most people would try to take advantage of you if they got a
+    chance, or would they try to be fair?
+  options:
+    - {code: 1, text: "Would take advantage of you"}
+    - {code: 2, text: "Would try to be fair"}
+    - {code: 3, text: "Depends", volunteered: true}
+
+- qid: gss:helpful
+  var: helpful
+  qtype: single_choice
+  # probe-calibrated (2026-07-12): listed=82% hedge vs 16% real; last-resort=20%, MAE 43.9->13.8
+  volunteered_style: last-resort
+  text: >-
+    Would you say that most of the time people try to be helpful, or that
+    they are mostly just looking out for themselves?
+  options:
+    - {code: 1, text: "Try to be helpful"}
+    - {code: 2, text: "Just look out for themselves"}
+    - {code: 3, text: "Depends", volunteered: true}
+
+- qid: gss:courts
+  var: courts
+  qtype: single_choice
+  text: >-
+    In general, do you think the courts in this area deal too harshly or not
+    harshly enough with criminals?
+  options:
+    - {code: 1, text: "Too harshly"}
+    - {code: 2, text: "Not harshly enough"}
+    - {code: 3, text: "About right", volunteered: true}
+
+- qid: gss:conlegis
+  var: conlegis
+  qtype: single_choice
+  text: >-
+    I am going to name an institution in this country. As far as the people
+    running this institution are concerned, would you say you have a great
+    deal of confidence, only some confidence, or hardly any confidence at all
+    in them? Congress.
+  options:
+    - {code: 1, text: "A great deal"}
+    - {code: 2, text: "Only some"}
+    - {code: 3, text: "Hardly any"}
+
+- qid: gss:confinan
+  var: confinan
+  qtype: single_choice
+  text: >-
+    I am going to name an institution in this country. As far as the people
+    running this institution are concerned, would you say you have a great
+    deal of confidence, only some confidence, or hardly any confidence at all
+    in them? Banks and financial institutions.
+  options:
+    - {code: 1, text: "A great deal"}
+    - {code: 2, text: "Only some"}
+    - {code: 3, text: "Hardly any"}
+
+- qid: gss:conarmy
+  var: conarmy
+  qtype: single_choice
+  text: >-
+    I am going to name an institution in this country. As far as the people
+    running this institution are concerned, would you say you have a great
+    deal of confidence, only some confidence, or hardly any confidence at all
+    in them? The military.
+  options:
+    - {code: 1, text: "A great deal"}
+    - {code: 2, text: "Only some"}
+    - {code: 3, text: "Hardly any"}
+
+- qid: gss:happy
+  var: happy
+  qtype: single_choice
+  text: >-
+    Taken all together, how would you say things are these days - would you
+    say that you are very happy, pretty happy, or not too happy?
+  options:
+    - {code: 1, text: "Very happy"}
+    - {code: 2, text: "Pretty happy"}
+    - {code: 3, text: "Not too happy"}
+
+- qid: gss:health
+  var: health
+  qtype: single_choice
+  text: >-
+    Would you say your own health, in general, is excellent, good, fair, or
+    poor?
+  options:
+    - {code: 1, text: "Excellent"}
+    - {code: 2, text: "Good"}
+    - {code: 3, text: "Fair"}
+    - {code: 4, text: "Poor"}
+
+- qid: gss:satfin
+  var: satfin
+  qtype: single_choice
+  text: >-
+    We are interested in how people are getting along financially these days.
+    So far as you and your family are concerned, would you say that you are
+    pretty well satisfied with your present financial situation, more or less
+    satisfied, or not satisfied at all?
+  options:
+    - {code: 1, text: "Pretty well satisfied"}
+    - {code: 2, text: "More or less satisfied"}
+    - {code: 3, text: "Not satisfied at all"}
+
+- qid: gss:polviews
+  var: polviews
+  qtype: single_choice
+  text: >-
+    We hear a lot of talk these days about liberals and conservatives. I'm
+    going to show you a seven-point scale on which the political views that
+    people might hold are arranged from extremely liberal - point 1 - to
+    extremely conservative - point 7. Where would you place yourself on this
+    scale?
+  options:
+    - {code: 1, text: "Extremely liberal"}
+    - {code: 2, text: "Liberal"}
+    - {code: 3, text: "Slightly liberal"}
+    - {code: 4, text: "Moderate, middle of the road"}
+    - {code: 5, text: "Slightly conservative"}
+    - {code: 6, text: "Conservative"}
+    - {code: 7, text: "Extremely conservative"}
+
+- qid: gss:partyid
+  var: partyid
+  qtype: single_choice
+  text: >-
+    Generally speaking, do you usually think of yourself as a Republican,
+    Democrat, Independent, or what?
+  options:
+    - {code: 0, text: "Strong Democrat"}
+    - {code: 1, text: "Not very strong Democrat"}
+    - {code: 2, text: "Independent, close to Democrat"}
+    - {code: 3, text: "Independent"}
+    - {code: 4, text: "Independent, close to Republican"}
+    - {code: 5, text: "Not very strong Republican"}
+    - {code: 6, text: "Strong Republican"}
+    - {code: 7, text: "Other party", volunteered: true}
+
+- qid: gss:eqwlth
+  var: eqwlth
+  qtype: single_choice
+  text: >-
+    Some people think that the government in Washington ought to reduce the
+    income differences between the rich and the poor, perhaps by raising the
+    taxes of wealthy families or by giving income assistance to the poor.
+    Others think that the government should not concern itself with reducing
+    this income difference between the rich and the poor. Here is a card with
+    a scale from 1 to 7. Think of a score of 1 as meaning that the government
+    ought to reduce the income differences between rich and poor, and a score
+    of 7 meaning that the government should not concern itself with reducing
+    income differences. What score between 1 and 7 comes closest to the way
+    you feel?
+  options:
+    - {code: 1, text: "1 - Government should reduce income differences"}
+    - {code: 2, text: "2"}
+    - {code: 3, text: "3"}
+    - {code: 4, text: "4"}
+    - {code: 5, text: "5"}
+    - {code: 6, text: "6"}
+    - {code: 7, text: "7 - Government should not concern itself with income differences"}
+
+- qid: gss:helppoor
+  var: helppoor
+  qtype: single_choice
+  text: >-
+    Some people think that the government in Washington should do everything
+    possible to improve the standard of living of all poor Americans; they
+    are at Point 1 on this card. Other people think it is not the
+    government's responsibility, and that each person should take care of
+    himself; they are at Point 5. Where would you place yourself on this
+    scale, or haven't you made up your mind on this?
+  options:
+    - {code: 1, text: "1 - Government should improve living standards"}
+    - {code: 2, text: "2"}
+    - {code: 3, text: "3 - Agree with both"}
+    - {code: 4, text: "4"}
+    - {code: 5, text: "5 - People should take care of themselves"}

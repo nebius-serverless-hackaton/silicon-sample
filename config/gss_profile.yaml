@@ -1,0 +1,118 @@
+# Demographic variables rendered into agent personas.
+# `recode` maps GSS codes to persona-friendly text; category fields without a
+# recode use the .dta value labels as-is. `required: true` fields drop the
+# respondent row when missing.
+
+- var: age
+  field: age
+  type: int
+  required: true
+
+- var: sex
+  field: sex
+  type: category
+  required: true
+
+- var: race
+  field: race
+  type: category
+
+- var: region
+  field: region
+  type: category
+  required: true
+
+- var: degree
+  field: education
+  type: category
+  required: true
+  recode:
+    0: did not finish high school
+    1: high school diploma
+    2: associate degree
+    3: bachelor's degree
+    4: graduate degree
+
+- var: income16
+  field: income_bracket
+  type: category
+  recode:
+    1: under $25,000
+    2: under $25,000
+    3: under $25,000
+    4: under $25,000
+    5: under $25,000
+    6: under $25,000
+    7: under $25,000
+    8: under $25,000
+    9: under $25,000
+    10: under $25,000
+    11: under $25,000
+    12: under $25,000
+    13: under $25,000
+    14: under $25,000
+    15: $25,000 – $49,999
+    16: $25,000 – $49,999
+    17: $25,000 – $49,999
+    18: $25,000 – $49,999
+    19: $50,000 – $89,999
+    20: $50,000 – $89,999
+    21: $50,000 – $89,999
+    22: $90,000 – $129,999
+    23: $90,000 – $129,999
+    24: $130,000 or more
+    25: $130,000 or more
+    26: $130,000 or more
+
+- var: wrkstat
+  field: work
+  type: category
+  recode:
+    1: working full time
+    2: working part time
+    3: employed but temporarily not at work
+    4: unemployed and looking for work
+    5: retired
+    6: in school
+    7: keeping house
+    8: other
+
+- var: marital
+  field: marital
+  type: category
+
+- var: childs
+  field: children
+  type: int
+
+- var: relig
+  field: religion
+  type: category
+  recode:
+    1: Protestant
+    2: Catholic
+    3: Jewish
+    4: no religion
+    5: other
+    6: Buddhist
+    7: Hindu
+    8: other eastern religion
+    9: Muslim
+    10: Orthodox Christian
+    11: Christian
+    12: Native American
+    13: inter/non-denominational
+
+- var: attend
+  field: attend
+  type: category
+  recode:
+    0: never attends religious services
+    1: attends religious services less than once a year
+    2: attends religious services about once or twice a year
+    3: attends religious services several times a year
+    4: attends religious services about once a month
+    5: attends religious services 2-3 times a month
+    6: attends religious services nearly every week
+    7: attends religious services every week
+    8: attends religious services several times a week

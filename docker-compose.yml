@@ -1,0 +1,38 @@
+x-common: &common
+  build:
+    context: .
+    dockerfile: Dockerfile
+  env_file:
+    - path: .env
+      required: false
+  volumes:
+    - .:/app
+    - venv:/app/.venv
+    - uv-cache:/root/.cache/uv
+
+services:
+  app:
+    <<: *common
+    command: ["sleep", "infinity"]
+
+  sanity:
+    <<: *common
+    command: ["./scripts/sanity_check.sh"]
+
+  test:
+    <<: *common
+    command: ["python", "-m", "pytest", "tests/"]
+
+  pipe:
+    <<: *common
+    command: ["./scripts/pipe_check.sh"]
+
+  api:
+    <<: *common
+    command: ["silicon", "api", "--host", "0.0.0.0"]
+    ports:
+      - "8000:8000"
+
+volumes:
+  venv:
+  uv-cache:

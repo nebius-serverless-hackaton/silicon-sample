@@ -1,0 +1,10 @@
+{{ text }}
+
+Options:
+{% for o in options %}- {{ o }}
+{% endfor %}
+{% if last_resort %}
+Only if you absolutely cannot choose between the options above - as an extreme last resort - you may answer: {% for o in last_resort %}"{{ o }}"{% if not loop.last %} or {% endif %}{% endfor %}.
+
+{% endif %}
+Respond with only JSON: {"answer": "<exact text of one option above>"}
